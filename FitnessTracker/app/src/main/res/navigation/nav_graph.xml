@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--nav_graph-->
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/workoutListFragment">
+
+    <fragment
+        android:id="@+id/workoutListFragment"
+        android:name="com.example.fitnesstracker.WorkoutListFragment"
+        android:label="WorkoutListFragment" >
+        <action
+            android:id="@+id/action_workoutListFragment_to_addWorkoutFragment"
+            app:destination="@id/addWorkoutFragment" />
+        <action
+            android:id="@+id/action_workoutListFragment_to_exerciseListFragment"
+            app:destination="@id/exerciseListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addWorkoutFragment"
+        android:name="com.example.fitnesstracker.AddWorkoutFragment"
+        android:label="AddWorkoutFragment" >
+        <action
+            android:id="@+id/action_addWorkoutFragment_to_workoutListFragment"
+            app:destination="@id/workoutListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/exerciseListFragment"
+        android:name="com.example.fitnesstracker.ExerciseListFragment"
+        android:label="ExerciseListFragment" >
+        <action
+            android:id="@+id/action_exerciseListFragment_to_workoutListFragment"
+            app:destination="@id/workoutListFragment" />
+    </fragment>
+</navigation>

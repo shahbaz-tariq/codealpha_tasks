@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--item_exercise-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/exerciseName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Exercise Name" />
+
+    <TextView
+        android:id="@+id/exerciseSets"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/exerciseName"
+        tools:text="Sets: 3" />
+
+    <TextView
+        android:id="@+id/exerciseReps"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+        app:layout_constraintStart_toEndOf="@id/exerciseSets"
+        app:layout_constraintTop_toBottomOf="@id/exerciseName"
+        tools:text="Reps: 10"
+        android:layout_marginStart="5dp"/>
+
+    <TextView
+        android:id="@+id/exerciseWeight"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+        app:layout_constraintStart_toEndOf="@id/exerciseReps"
+        app:layout_constraintTop_toBottomOf="@id/exerciseName"
+        tools:text="Weight: 10kgs"
+        android:layout_marginStart="5dp"/>
+
+    <TextView
+        android:id="@+id/exerciseTargetMuscle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+        app:layout_constraintStart_toEndOf="@id/exerciseWeight"
+        app:layout_constraintTop_toBottomOf="@id/exerciseName"
+        tools:text="Target Muscle: Chest"
+        android:layout_marginStart="5dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
